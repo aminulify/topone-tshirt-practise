@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './Header.css';
+import { Toaster } from 'react-hot-toast';
 
 const Header = () => {
     return (
@@ -12,12 +13,13 @@ const Header = () => {
             <nav className='text-slate-700'>
                     <Link to='/'>Home</Link>
                     <Link to='/review'>Order Review</Link>
-                    <Link to='/about'>About</Link>
+                    <Link to='/grandpa'>Grandpa</Link>
                     <Link to='/contact'>Contact</Link>
             </nav>   
                 </div>
             <hr className='mt-3' />
             <Outlet></Outlet>
+            <Toaster></Toaster>
         </div>
     );
 };
